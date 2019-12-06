@@ -5,13 +5,16 @@ app = Flask(__name__)
 
 #from HTML
 
-@app.route("/")
-def index():
+@app.route('/index')
+def json():
     return render_template('index.html')
 
-def move_forward():
-    #Moving forward code
-    print("Moving Forward...")
+
+@app.route('/background_process_test')
+def background_process_test():
+    print("Hello")
+    return "nothing"
+
 
 #Python Code
 
