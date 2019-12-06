@@ -1,43 +1,13 @@
-import webbrowser
-from flask import Flask, render_template, Response, request, redirect, url_for
+from flask import Flask, render_template
 app = Flask(__name__)
-
-
-#from HTML
-
-@app.route('/index')
+@app.route('/json')
 def json():
-    return render_template('index.html')
-
+    return render_template('json.html')
 
 @app.route('/background_process_test')
 def background_process_test():
-    print("Hello")
-    return "nothing"
+    print ("Hello")
+    return ("nothing") 
+if __name__ == '__main__':
+    app.run(debug=True)
 
-
-#Python Code
-
-
-
-#End Python Code
-
-#to HTML
-
-f = open('index.js','w')
-
-message = """
-function test (){
-document.getElementById("dump").innerHTML = "<h1>Working!</h1>"
-}
-
-
-
-"""
-
-
-
-f.write(message)
-f.close()
-
-webbrowser.open_new_tab('index.js')
