@@ -5,6 +5,7 @@
 
 <body>
 <script src="jquery.js"></script>
+<script src="index.js"></script>
 <script type=text/javascript>
         $(function() {
           $('a#test').bind('click', function() {
@@ -21,8 +22,15 @@
 <div class='container'>
     <h3>Test</h3>
         <form>
-            <a href=# id=test><button class='btn btn-default'>Test</button></a>
+            <a id="myButton" href="javascript:void(0);" onclick="test();" >Click here</a>
         </form>
-
 </div>
+
+
+<div id="dump"></div>
+
+
+<script> 
+
+</script>
 </body>

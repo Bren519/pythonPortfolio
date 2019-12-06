@@ -24,16 +24,20 @@ def background_process_test():
 
 #to HTML
 
-f = open('excecute.js','w')
+f = open('index.js','w')
 
-message = """<html>
-<head></head>
-<body><p>Hello World!""" """</p></body>
-</html>"""
+message = """
+function test (){
+document.getElementById("dump").innerHTML = "<h1>Working!</h1>"
+}
+
+
+
+"""
 
 
 
 f.write(message)
 f.close()
 
-webbrowser.open_new_tab('excecute.js')
+webbrowser.open_new_tab('index.js')
